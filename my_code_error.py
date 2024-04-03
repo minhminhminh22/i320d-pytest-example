@@ -4,6 +4,8 @@ def fix_phone_num(phone_num_to_fix):
   # can only handle numbers that are exactly 10 digits long
   if (len(phone_num_to_fix) != 10):
     raise ValueError("Can only format numbers that are exactly 10 digits long")
+  if not (phone_num_to_fix.isdigit()):
+    raise ValueError("Only numbers is allowed")
 
   # given "5125558823". Split the parts, then recombine and return
   area_code = phone_num_to_fix[0:3] # 512 (first three digits)
